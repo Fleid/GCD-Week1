@@ -16,6 +16,7 @@ install.packages("xlsx")
 library(xlsx)
 dat <- read.xlsx("govNGAP.xlsx",header=TRUE,sheetIndex=1,startRow=18,endRow=23)
 dat <- dat[,c(7:15)]
+sum(dat$Zip*dat$Ext,na.rm=T) 
 
 #Question 4
 #Download Data
